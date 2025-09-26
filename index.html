@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seloria's website</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        :root {
+            --bg-primary: #0a0d1a;
+            --bg-secondary: #1a1f3a;
+            --accent-primary: #ffd700;
+            --accent-secondary: #64b5f6;
+            --text-primary: #ffffff;
+            --text-secondary: #e3f2fd;
+            --font-heading: 'Orbitron', monospace;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: linear-gradient(135deg, #0a0a2e, #16213e, #1a1a3a);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-secondary), #4fc3f7);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.3);
+            font-family: var(--font-body);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(100, 181, 246, 0.4);
+            background: linear-gradient(135deg, #4fc3f7, var(--accent-secondary));
+        }
+
+        .description {
+            background: rgba(25, 30, 50, 0.6);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid var(--accent-secondary);
+            backdrop-filter: blur(20px);
+        }
+
+        .description p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: rgba(100, 181, 246, 0.08);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-secondary);
+        }
+
+        .feature h3 {
+            color: var(--accent-secondary);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+        }
+
+        .feature p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seloria's website</h1>
+        <p class="subtitle">A work in progress</p>
+        
+        <div class="description">
+            <p>Currently this website only has a faction guide for <strong>Twilight Imperium 4th Edition</strong>!</p>
+            <p>Access it through the button below</p
+        </div>
+
+        <a href="twilight-imperium-factions/ti4-faction-guide.html" class="cta-button">
+            TI4 Faction Guide
+        </a>
+        <a href="blog/blog.html" class="cta-button">
+            My blog
+        </a>
+    </div>
+</body>
+</html>
