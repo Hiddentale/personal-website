@@ -1,0 +1,3 @@
+[submodule "components/twilight-imperium-factions"]
+	path = components/twilight-imperium-factions
+	url = https://github.com/Hiddentale/twilight-imperium-factions.git
