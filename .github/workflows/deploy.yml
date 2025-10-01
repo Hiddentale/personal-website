@@ -16,17 +16,6 @@ jobs:
     
     - name: Debug Connection
       run: |
-        echo "=== Main repo submodule pointer ==="
-        git ls-tree HEAD components/twilight-imperium-factions
-
-        echo "=== Actual submodule commit ==="
-        cd components/twilight-imperium-factions
-        git rev-parse HEAD
-        cd ../..
-
-        echo "=== Submodule files ==="
-        ls -la components/twilight-imperium-factions/
-        
         mkdir -p ~/.ssh
         chmod 700 ~/.ssh
 
