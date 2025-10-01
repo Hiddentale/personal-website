@@ -16,6 +16,8 @@ jobs:
     
     - name: Debug Connection
       run: |
+        git submodule update --init --recursive --remote
+        
         mkdir -p ~/.ssh
         chmod 700 ~/.ssh
 
