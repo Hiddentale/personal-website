@@ -1,4 +1,4 @@
 
-Personal website built with modular component architecture.
+Personal website hosted at NearlyFreeSpeech.net
 
-Website is hosted at https://seloria.nfshost.com
+Website can be accessed at https://seloria.nfshost.com
