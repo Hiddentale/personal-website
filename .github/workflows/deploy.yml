@@ -32,8 +32,16 @@ jobs:
           --exclude='.github/' \
           --exclude='node_modules/' \
           --progress \
-          ./ "${{ secrets.SFTP_USERNAME }}@ssh.nyc1.nearlyfreespeech.net:/public/"
+          ./ "${{ secrets.SFTP_USERNAME }}@ssh.nyc1.nearlyfreespeech.net:/home/public/"
         
         echo "Deployment completed successfully"
       env:
         SSH_AUTH_SOCK: /tmp/ssh_auth_sock
+
+    - name: Purge Cloudflare Cache
+      run: |
+        curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+          -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          --data '{"purge_everything":true}'
+        echo "Cloudflare cache purged"
