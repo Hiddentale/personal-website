@@ -32,7 +32,7 @@ jobs:
           --exclude='.github/' \
           --exclude='node_modules/' \
           --progress \
-          ./ "${{ secrets.SFTP_USERNAME }}@ssh.nyc1.nearlyfreespeech.net:/home/public/"
+          ./ "${{ secrets.SFTP_USERNAME }}@ssh.nyc1.nearlyfreespeech.net:/public/"
         
         echo "Deployment completed successfully"
       env:
