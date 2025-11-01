@@ -1,4 +1,8 @@
-<FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|mp3)$">
+<FilesMatch "\.(css|js)$">
+  Header set Cache-Control "max-age=3600, public"
+</FilesMatch>
+
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|mp3)$">
   Header set Cache-Control "max-age=31536000, public"
 </FilesMatch>
 
