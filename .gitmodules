@@ -4,3 +4,6 @@
 [submodule "components/my-blog"]
 	path = components/my-blog
 	url = https://github.com/Hiddentale/my-blog
+[submodule "components/ultra-tracker"]
+	path = components/ultra-tracker
+	url = https://github.com/Hiddentale/ultra-tracker

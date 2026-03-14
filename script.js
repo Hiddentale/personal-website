@@ -313,6 +313,11 @@ class GraphSparks {
 
     spawnSparks() {
         const spawnSpark = () => {
+            if (document.hidden) {
+                setTimeout(spawnSpark, 1000);
+                return;
+            }
+
             if (this.edges.length === 0) {
                 setTimeout(spawnSpark, 1000);
                 return;
@@ -339,6 +344,12 @@ class GraphSparks {
         };
 
         spawnSpark();
+
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                this.sparks = [];
+            }
+        });
     }
 
     animate() {
