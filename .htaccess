@@ -1,3 +1,6 @@
+AddType application/json .json
+AddType text/markdown .md
+
 <FilesMatch "\.(css|js)$">
   Header set Cache-Control "max-age=3600, public"
 </FilesMatch>
